@@ -14,12 +14,17 @@
     <ul class="list-group">
   <!--<li class="list-group-item active" aria-current="true">An active item</li>-->
         <?php
-            $files = scandir("C:\Users\Wes\www");
+            $files = scandir("C:\Users\Wes\Learning-PHP");
             for ($i = 2; $i < count($files); $i++) {
                 echo "<li class=\"list-group-item\"><a href=". $files[$i] . ">" . ucfirst(substr($files[$i], 0, -4)) . "</a></li>";
             }
         ?>
     </ul>
+    <?php
+        include 'navigation.php';
+        \navigation\RenderNavigation();
+         
+    ?>
     </div>
 </body>
 </html>
