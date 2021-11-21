@@ -8,23 +8,11 @@
     <title>PHP Playground</title>
 </head>
 <body>
-    <div style="text-align: center;">
-    <h2>PHP Playground</h2>
-    <p>Files on Site: </p>
-    <ul class="list-group">
-  <!--<li class="list-group-item active" aria-current="true">An active item</li>-->
+    <main>
         <?php
-            $files = scandir("C:\Users\Wes\Learning-PHP");
-            for ($i = 2; $i < count($files); $i++) {
-                echo "<li class=\"list-group-item\"><a href=". $files[$i] . ">" . ucfirst(substr($files[$i], 0, -4)) . "</a></li>";
-            }
-        ?>
-    </ul>
-    <?php
-        include 'navigation.php';
-        \navigation\RenderNavigation();
-         
-    ?>
-    </div>
+                include '.components\navigation.php';
+                \navigation\RenderNavigation();
+            ?>
+    </main>
 </body>
 </html>
